@@ -45,6 +45,16 @@ body {
   max-width: 400px;
 }
 
+#settings {
+  width: 100%;
+}
+
+.setting {
+  margin: 15px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
 /* button {
   border-radius: 8px;
   border: 1px solid transparent;
