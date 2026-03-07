@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClipboard } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   const [len, setLength] = useState(12)
@@ -11,6 +13,12 @@ function App() {
     <>
       <div id="container">
         <h3>Password Generator</h3>
+        <div className="password-res">
+          <span></span>
+          <button>
+            <FontAwesomeIcon icon={faClipboard} />
+          </button>
+        </div>
         <div className="setting">
           <label htmlFor="length">Password Length</label>
           <input id="length" type="number" min="5" max="20" value={len} onChange={e => setLength(e.target.value)} />
