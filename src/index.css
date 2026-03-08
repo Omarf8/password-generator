@@ -24,6 +24,10 @@ body {
   min-height: 100vh;
 }
 
+h2 {
+  margin: 5px 0px 20px 0px;
+}
+
 /* body {
   margin: 0;
   display: flex;
@@ -43,6 +47,28 @@ body {
   padding: 20px;
   width: 90%;
   max-width: 400px;
+}
+
+#password-res {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  background-color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  height: 40px;
+  padding: 5px;
+}
+
+.clip {
+  position: absolute;
+  font-size: 20px;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #settings {
