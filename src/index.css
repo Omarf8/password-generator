@@ -48,6 +48,7 @@ h2 {
   padding: 20px;
   width: 90%;
   max-width: 400px;
+  box-shadow: 0 0 20px 5px rgba(255, 124, 124, 0.5);
 }
 
 #password-res {
