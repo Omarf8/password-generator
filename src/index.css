@@ -15,6 +15,7 @@
 
 body {
   margin: 0;
+  background-color: rgba(93, 98, 255, 0.65);
 }
 
 #root {
@@ -80,6 +81,22 @@ h2 {
   display: flex;
   justify-content: space-between;
 }
+
+button#generate {
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: rgba(255, 64, 64, 0.65);
+}
+
+button#generate:hover {
+  background-color: rgba(255, 64, 64, 0.9);
+}
+
+/* button#generate:active {
+  background-color: red;
+} */
 
 /* button {
   border-radius: 8px;
