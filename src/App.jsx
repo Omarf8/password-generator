@@ -26,6 +26,8 @@ function App() {
     if (nums) valid += num
     if (sym) valid += sy
 
+    if(valid === "") return // Only stop if none of the boxes are checked
+
     // The user is able to type numbers that exceed the defined limits so check
     let length = len
     if(len < 3) {
