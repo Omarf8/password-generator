@@ -29,15 +29,6 @@ h2 {
   margin: 5px 0px 20px 0px;
 }
 
-/* body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-} */
-
 #container {
   background-color: rgb(124, 128, 255);
   box-sizing: border-box;
@@ -63,6 +54,7 @@ h2 {
   border-radius: 5px;
   height: 40px;
   padding: 5px;
+  color: black;
 }
 
 .clip {
