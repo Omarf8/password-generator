@@ -41,13 +41,19 @@ function App() {
     setPass(password)
   }
 
+  const copyToClipboard = () => {
+    if(pass) {
+      navigator.clipboard.writeText(pass)
+    }
+  }
+
   return (
     <>
       <div id="container">
         <h2>Password Generator</h2>
         <div id="password-res">
           <span className="result">{pass}</span>
-          <button className="clip">
+          <button className="clip" onClick={copyToClipboard}>
             <FontAwesomeIcon icon={faClipboard} />
           </button>
         </div>
