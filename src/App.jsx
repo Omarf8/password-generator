@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClipboard } from '@fortawesome/free-solid-svg-icons'
+import { faClipboard, faClipboardCheck } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   const [len, setLength] = useState(12)
-  const [upper, setUpper] = useState(true);
-  const [lower, setLower] = useState(true);
-  const [nums, setNums] = useState(true);
-  const [sym, setSym] = useState(true);
+  const [upper, setUpper] = useState(true)
+  const [lower, setLower] = useState(true)
+  const [nums, setNums] = useState(true)
+  const [sym, setSym] = useState(true)
   const [pass, setPass] = useState(null)
+  const [copied, setCopied] = useState(false)
 
   const getPassword = () => {
     const up = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -44,6 +45,8 @@ function App() {
   const copyToClipboard = () => {
     if(pass) {
       navigator.clipboard.writeText(pass)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
     }
   }
 
@@ -54,7 +57,7 @@ function App() {
         <div id="password-res">
           <span className="result">{pass}</span>
           <button className="clip" onClick={copyToClipboard}>
-            <FontAwesomeIcon icon={faClipboard} />
+            <FontAwesomeIcon icon={copied ? faClipboardCheck : faClipboard} />
           </button>
         </div>
         <div id="settings">
