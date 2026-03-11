@@ -8,13 +8,45 @@ function App() {
   const [lower, setLower] = useState(true);
   const [nums, setNums] = useState(true);
   const [sym, setSym] = useState(true);
+  const [pass, setPass] = useState(null)
+
+  const getPassword = () => {
+    const up = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    const low = "abcdefghijklmnopqrstuvwxyz"
+    const num = "1234567890"
+    const sy = "@#$%^&*()_+-=[]{}|;:<>?"
+
+    let valid = ""
+    if (upper) valid += up
+    if (lower) valid += low
+    if (nums) valid += num
+    if (sym) valid += sy
+
+    // The user is able to type numbers that exceed the defined limits so check
+    let length = len
+    if(len < 5) {
+      setLength(5)
+      length = 5
+    }
+    else if(len > 20) {
+      setLength(20)
+      length = 20
+    }
+
+    let password = ""
+    for(let i = 0; i < length; i++) {
+      password += valid[Math.floor(Math.random() * valid.length)]
+    }
+
+    setPass(password)
+  }
 
   return (
     <>
       <div id="container">
         <h2>Password Generator</h2>
         <div id="password-res">
-          <span className="result"></span>
+          <span className="result">{pass}</span>
           <button className="clip">
             <FontAwesomeIcon icon={faClipboard} />
           </button>
@@ -41,7 +73,7 @@ function App() {
             <input id="symbols" type="checkbox" checked={sym} onChange={e => setSym(e.target.checked)}/>
           </div>
         </div>
-        <button id="generate">Generate</button>
+        <button id="generate" onClick={getPassword}>Generate</button>
       </div>
     </>
   )
