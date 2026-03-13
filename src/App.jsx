@@ -58,7 +58,7 @@ function App() {
 
   return (
     <>
-      <div id="container">
+      <div id="container" className={strength !== null ? `shadow-${strength}` : "default-shadow"}>
         <h2>Password Generator</h2>
         <div id="password-res">
           <span className="result">{pass}</span>

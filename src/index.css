@@ -39,7 +39,6 @@ h2 {
   padding: 20px;
   width: 90%;
   max-width: 400px;
-  box-shadow: 0 0 20px 5px rgba(255, 124, 124, 0.5);
 }
 
 #password-res {
@@ -85,6 +84,30 @@ h2 {
 
 .strength-4 {
   background-color: rgb(63, 164, 0);
+}
+
+.default-shadow {
+  box-shadow: 0 0 20px 5px black;
+}
+
+.shadow-0 {
+  box-shadow: 0 0 20px 5px rgb(255, 75, 75);
+}
+
+.shadow-1 {
+  box-shadow: 0 0 20px 5px rgb(255, 188, 65);
+}
+
+.shadow-2 {
+  box-shadow: 0 0 20px 5px rgb(255, 255, 130);
+}
+
+.shadow-3 {
+  box-shadow: 0 0 20px 5px greenyellow;
+}
+
+.shadow-4 {
+  box-shadow: 0 0 20px 5px rgb(63, 164, 0);
 }
 
 .clip {
